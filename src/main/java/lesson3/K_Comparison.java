@@ -12,5 +12,14 @@ public class K_Comparison {
 
         System.out.println(!!(a < b));
         System.out.println(!true);
+
+
+        int age = 20;
+
+        boolean isChild = age < 18;
+
+        if(!isChild) {
+            System.out.println("");
+        }
     }
 }
