@@ -5,7 +5,7 @@ public class Programm {
         Dog palkan1 = new Dog("Palkan");
         Dog palkan2 = new Dog("Sharik", 10);
         Dog palkan3 = palkan1;
-        palkan3.age = 20;
+        // palkan3.age = 20;
         palkan1.bark();
         palkan1.bark("Vova");
         palkan1.bark( 5, "Vova");

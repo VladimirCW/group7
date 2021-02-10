@@ -1,13 +1,14 @@
 package lesson4;
 
-public class Cat {
+public class Cat extends Animal{
     String name = "Barsik";
 
     public void meow() {
         System.out.println("Meow-meow");
     }
 
-    public void sleep() {
-        System.out.println("I am sleeping ...");
+    @Override
+    public void eat() {
+        System.out.println("I am eating !!!!");
     }
 }

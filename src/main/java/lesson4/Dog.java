@@ -1,9 +1,11 @@
 package lesson4;
 
-public class Dog {
+public class Dog extends Animal{
+
+    private int age = 10;
+
     String name = "Palkan";
     String color = "grey";
-    int age = 10;
     static int counter = 0;
 
     public Dog(){
@@ -20,6 +22,14 @@ public class Dog {
         this();
         this.name = name;
         this.age = age;
+    }
+
+    public void setAge(int age) {
+        if(age > 0 && age <=25 ) {
+            this.age = age;
+        } else {
+            System.out.println(String.format("The age '%d' is unexcepted", age));
+        }
     }
 
     public int getAge() {
@@ -47,11 +57,23 @@ public class Dog {
         }
     }
 
-    public void sleep() {
-        System.out.println("I am sleeping ...");
-    }
-
     static public void someMethod() {
         System.out.println("Some static method");
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("I am eating !!!!");
+    }
+
+    public boolean equals(Dog dog) {
+        /*if (this.name.equals(dog.name) && this.age == dog.age) {
+            return true;
+        } else  {
+            return false;
+        }*/
+
+        // return (this.name.equals(dog.name) && this.age == dog.age) ? true : false;
+        return (this.name.equals(dog.name) && this.age == dog.age);
     }
 }
